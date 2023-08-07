@@ -17,8 +17,14 @@ class mobileModel extends mobile {
   getModel = () => {
     console.log(this.getInfo()+ " and the model is - "+ this.model);
   }
+
+  static getMessage = () => {
+    return " This is a static method, and you cant access me with the class object, use the class to call me."
+  }
 }
 
 
 let info = new mobileModel("samsung", "Galaxy ultra s22");
 info.getModel();
+
+console.log(mobileModel.getMessage());
